@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDAH Focus - O Primeiro Assistente Criado Por Quem Tem TDAH</title>
+    <title>TDAH Coach - O Primeiro Assistente Criado Por Quem Tem TDAH</title>
     <meta name="description" content="Destrave sua vida com TDAH. Assistente inteligente no WhatsApp que entende como seu cérebro funciona. Criado por quem tem TDAH, para quem tem TDAH.">
     
     <!-- Google Fonts -->
@@ -25,9 +25,9 @@
             background: #ffffff;
         }
         
-        /* Hero Section - Gradiente suave para não sobrecarregar */
+        /* Hero Section - Mais sóbrio */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -35,44 +35,39 @@
         
         .alert-badge {
             display: inline-block;
-            background: #fbbf24;
-            color: #78350f;
+            background: white;
+            color: #6366f1;
             padding: 8px 16px;
             border-radius: 50px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             margin-bottom: 20px;
-            animation: pulse 3s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.02); opacity: 0.9; }
         }
         
         h1 {
-            font-size: clamp(28px, 5vw, 42px);
+            font-size: clamp(24px, 5vw, 42px);
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.3;
             margin-bottom: 20px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 10px;
         }
         
         .subtitle {
-            font-size: 18px;
+            font-size: 17px;
             opacity: 0.95;
             max-width: 600px;
             margin: 0 auto 30px;
             line-height: 1.5;
+            padding: 0 10px;
         }
         
-        /* Story Section - Fundo neutro para descansar os olhos */
+        /* Story Section */
         .story {
-            background: #fafafa;
+            background: #f9fafb;
             padding: 50px 20px;
-            border-bottom: 1px solid #e5e7eb;
         }
         
         .container {
@@ -82,33 +77,34 @@
         
         .story-box {
             background: white;
-            padding: 35px;
-            border-radius: 16px;
+            padding: 30px;
+            border-radius: 12px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         
         .story-title {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #667eea;
+            color: #6366f1;
         }
         
         .story-text {
             font-size: 16px;
             line-height: 1.8;
             color: #374151;
+            word-wrap: break-word;
         }
         
         .highlight {
-            background: linear-gradient(to right, rgba(102,126,234,0.15), rgba(118,75,162,0.15));
-            padding: 3px 8px;
+            background: rgba(99,102,241,0.1);
+            padding: 2px 6px;
             border-radius: 4px;
             font-weight: 600;
-            white-space: nowrap;
+            display: inline;
         }
         
-        /* Creator Section - Seção pessoal com warmth */
+        /* Creator Section */
         .creator {
             background: white;
             padding: 50px 20px;
@@ -126,12 +122,12 @@
             height: 140px;
             border-radius: 50%;
             margin-bottom: 25px;
-            border: 5px solid #667eea;
-            box-shadow: 0 4px 20px rgba(102,126,234,0.2);
+            border: 4px solid #6366f1;
+            object-fit: cover;
         }
         
         .creator-name {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 700;
             color: #1a1a1a;
             margin-bottom: 15px;
@@ -141,89 +137,100 @@
             font-size: 16px;
             color: #4b5563;
             line-height: 1.7;
-            margin-bottom: 15px;
         }
         
-        /* Example Section - Destaque visual melhorado */
+        /* Example Section - WhatsApp Style */
         .example-section {
-            background: linear-gradient(180deg, #fef3c7 0%, #fde68a 100%);
+            background: #f9fafb;
             padding: 50px 20px;
         }
         
         .example-box {
             max-width: 650px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 35px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 2px solid #fbbf24;
         }
         
         .example-title {
             font-size: 20px;
             font-weight: 700;
             margin-bottom: 25px;
-            color: #92400e;
+            color: #1a1a1a;
             text-align: center;
         }
         
-        .chat-bubble {
-            position: relative;
-            padding: 15px 18px;
-            margin-bottom: 20px;
-            border-radius: 18px;
-            max-width: 85%;
-        }
-        
-        .chat-bubble.user {
-            background: #e0e7ff;
-            margin-left: auto;
-            border-bottom-right-radius: 4px;
-        }
-        
-        .chat-bubble.ai {
-            background: #dcfce7;
-            margin-right: auto;
-            border-bottom-left-radius: 4px;
-        }
-        
-        .chat-label {
-            font-weight: 600;
-            font-size: 12px;
-            margin-bottom: 8px;
-            opacity: 0.7;
-        }
-        
-        .chat-bubble.user .chat-label {
-            color: #5b21b6;
-        }
-        
-        .chat-bubble.ai .chat-label {
-            color: #166534;
-        }
-        
-        .chat-text {
-            color: #1f2937;
-            line-height: 1.6;
-            font-size: 15px;
-        }
-        
-        .example-footer {
-            text-align: center;
-            margin-top: 25px;
-            padding: 20px;
-            background: #fef3c7;
+        .whatsapp-container {
+            background: #e5ddd5;
             border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
-        .example-footer p {
-            color: #92400e;
+        .whatsapp-header {
+            background: #075e54;
+            margin: -20px -20px 20px -20px;
+            padding: 15px 20px;
+            border-radius: 12px 12px 0 0;
+            color: white;
             font-weight: 600;
             font-size: 16px;
         }
         
-        /* Benefits - Cards com visual clean */
+        .chat-bubble {
+            position: relative;
+            padding: 12px 16px;
+            margin-bottom: 15px;
+            max-width: 75%;
+            clear: both;
+        }
+        
+        .chat-bubble.user {
+            background: #dcf8c6;
+            float: right;
+            border-radius: 10px 10px 0 10px;
+            margin-left: 25%;
+        }
+        
+        .chat-bubble.ai {
+            background: white;
+            float: left;
+            border-radius: 10px 10px 10px 0;
+            margin-right: 25%;
+        }
+        
+        .chat-time {
+            font-size: 11px;
+            color: #667781;
+            margin-bottom: 5px;
+        }
+        
+        .chat-text {
+            color: #111b21;
+            line-height: 1.5;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .example-footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+        }
+        
+        .example-footer p {
+            color: #6366f1;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        /* Benefits */
         .benefits {
             padding: 60px 20px;
             background: white;
@@ -231,12 +238,10 @@
         
         .benefits h2 {
             text-align: center;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
             margin-bottom: 15px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #1a1a1a;
         }
         
         .benefits-subtitle {
@@ -248,28 +253,22 @@
         
         .benefit-grid {
             display: grid;
-            gap: 24px;
+            gap: 20px;
             max-width: 700px;
             margin: 0 auto;
         }
         
         .benefit-card {
-            background: #fafafa;
-            padding: 28px;
-            border-radius: 16px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 3px solid #6366f1;
         }
         
         .benefit-title {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: #1a1a1a;
         }
         
@@ -279,18 +278,18 @@
             line-height: 1.6;
         }
         
-        /* How it Works - Visual simplificado */
+        /* How it Works */
         .how-it-works {
-            background: linear-gradient(180deg, #e0e7ff 0%, #c7d2fe 100%);
+            background: #f9fafb;
             padding: 50px 20px;
             text-align: center;
         }
         
         .how-it-works h2 {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 700;
             margin-bottom: 35px;
-            color: #4c1d95;
+            color: #1a1a1a;
         }
         
         .steps {
@@ -302,18 +301,17 @@
         .step {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             background: white;
             padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-radius: 10px;
         }
         
         .step-number {
-            background: #667eea;
+            background: #6366f1;
             color: white;
-            width: 32px;
-            height: 32px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -321,6 +319,7 @@
             font-weight: bold;
             margin-right: 15px;
             flex-shrink: 0;
+            font-size: 14px;
         }
         
         .step-text {
@@ -332,21 +331,20 @@
         /* Testimonials */
         .testimonials {
             padding: 60px 20px;
-            background: #fafafa;
+            background: white;
         }
         
         .testimonial-card {
-            background: white;
-            padding: 35px;
-            border-radius: 16px;
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 12px;
             max-width: 600px;
-            margin: 0 auto 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border-left: 3px solid #667eea;
+            margin: 0 auto 20px;
+            border-left: 3px solid #6366f1;
         }
         
         .testimonial-text {
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.7;
             color: #374151;
             font-style: italic;
@@ -355,16 +353,16 @@
         
         .testimonial-author {
             font-weight: 600;
-            color: #667eea;
-            font-size: 15px;
+            color: #6366f1;
+            font-size: 14px;
         }
         
-        /* Important Notice - Vermelho de alerta */
+        /* Important Notice */
         .notice {
-            background: #fef2f2;
-            border: 2px solid #dc2626;
-            padding: 28px;
-            border-radius: 16px;
+            background: #fee2e2;
+            border: 2px solid #ef4444;
+            padding: 25px;
+            border-radius: 12px;
             max-width: 650px;
             margin: 50px auto;
         }
@@ -372,39 +370,40 @@
         .notice-title {
             font-weight: 700;
             color: #991b1b;
-            margin-bottom: 12px;
-            font-size: 19px;
+            margin-bottom: 10px;
+            font-size: 18px;
         }
         
         .notice-text {
-            color: #7f1d1d;
-            line-height: 1.7;
+            color: #991b1b;
+            line-height: 1.6;
             font-size: 15px;
         }
         
-        /* Pricing - Call to action forte */
+        /* Pricing */
         .pricing {
-            padding: 70px 20px;
-            background: white;
+            padding: 60px 20px;
+            background: #f9fafb;
         }
         
         .price-card {
-            max-width: 420px;
+            max-width: 400px;
             margin: 0 auto;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 45px;
-            border-radius: 24px;
+            background: white;
+            border: 2px solid #6366f1;
+            color: #1a1a1a;
+            padding: 40px;
+            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(102,126,234,0.3);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
         .badge {
-            background: #fbbf24;
-            color: #78350f;
+            background: #6366f1;
+            color: white;
             padding: 8px 16px;
             border-radius: 50px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             display: inline-block;
             margin-bottom: 25px;
@@ -413,77 +412,73 @@
         
         .price-old {
             text-decoration: line-through;
-            opacity: 0.7;
-            font-size: 22px;
+            color: #9ca3af;
+            font-size: 20px;
         }
         
         .price-new {
-            font-size: 52px;
+            font-size: 48px;
             font-weight: 800;
             margin: 15px 0;
+            color: #6366f1;
         }
         
         .price-period {
-            font-size: 18px;
-            opacity: 0.95;
+            font-size: 17px;
+            color: #4b5563;
         }
         
         .scarcity {
-            background: rgba(255,255,255,0.2);
-            padding: 12px 24px;
-            border-radius: 12px;
+            background: #fef3c7;
+            padding: 12px 20px;
+            border-radius: 8px;
             margin: 25px 0;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
+            color: #92400e;
         }
         
-        /* CTA Button - Verde confiança com destaque */
+        /* CTA Button */
         .cta-button {
-            background: #16a34a;
+            background: #10b981;
             color: white;
-            padding: 22px 44px;
-            font-size: 18px;
+            padding: 18px 36px;
+            font-size: 17px;
             font-weight: 700;
             text-decoration: none;
             display: inline-block;
-            border-radius: 12px;
+            border-radius: 8px;
             margin: 20px auto;
-            box-shadow: 0 6px 25px rgba(22,163,74,0.35);
+            box-shadow: 0 4px 15px rgba(16,185,129,0.25);
             transition: all 0.3s;
-            animation: cta-glow 2s infinite;
-        }
-        
-        @keyframes cta-glow {
-            0%, 100% { box-shadow: 0 6px 25px rgba(22,163,74,0.35); }
-            50% { box-shadow: 0 8px 30px rgba(22,163,74,0.5); }
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            background: #15803d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16,185,129,0.35);
         }
         
         /* Guarantee */
         .guarantee {
             text-align: center;
             padding: 40px 20px;
-            background: #fafafa;
+            background: white;
         }
         
         .guarantee-items {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
             margin-top: 25px;
         }
         
         .guarantee-item {
             color: #6b7280;
-            font-size: 15px;
+            font-size: 14px;
         }
         
-        /* FAQ - Clean e organizado */
+        /* FAQ */
         .faq {
             padding: 60px 20px;
             max-width: 700px;
@@ -492,54 +487,184 @@
         
         .faq h2 {
             text-align: center;
-            font-size: 30px;
+            font-size: 28px;
             margin-bottom: 40px;
             color: #1a1a1a;
         }
         
         .faq-item {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 24px;
+            padding-bottom: 20px;
         }
         
         .faq-question {
             font-weight: 700;
-            font-size: 17px;
-            margin-bottom: 12px;
+            font-size: 16px;
+            margin-bottom: 10px;
             color: #1a1a1a;
         }
         
         .faq-answer {
             color: #4b5563;
-            line-height: 1.7;
+            line-height: 1.6;
             font-size: 15px;
         }
         
         /* Mobile Responsive */
         @media (max-width: 640px) {
             .hero {
-                padding: 30px 15px;
+                padding: 25px 15px;
             }
             
             h1 {
-                font-size: 26px;
+                font-size: 24px;
+                line-height: 1.3;
             }
             
-            .price-card {
-                padding: 35px 25px;
+            .subtitle {
+                font-size: 15px;
             }
             
-            .price-new {
-                font-size: 42px;
+            .story-box {
+                padding: 20px;
+            }
+            
+            .story-text {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+            
+            .highlight {
+                display: inline;
+                word-break: break-word;
+            }
+            
+            .creator-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .creator-name {
+                font-size: 22px;
+            }
+            
+            .creator-bio {
+                font-size: 15px;
+                padding: 0 10px;
+            }
+            
+            .whatsapp-container {
+                padding: 15px;
+            }
+            
+            .whatsapp-header {
+                margin: -15px -15px 15px -15px;
+                padding: 12px 15px;
+                font-size: 15px;
             }
             
             .chat-bubble {
-                max-width: 95%;
+                max-width: 85%;
+                padding: 10px 14px;
+            }
+            
+            .chat-bubble.user {
+                margin-left: 15%;
+            }
+            
+            .chat-bubble.ai {
+                margin-right: 15%;
+            }
+            
+            .chat-text {
+                font-size: 14px;
+            }
+            
+            .example-footer {
+                padding: 15px;
+            }
+            
+            .example-footer p {
+                font-size: 15px;
+            }
+            
+            .benefits h2 {
+                font-size: 24px;
+            }
+            
+            .benefit-card {
+                padding: 20px;
+            }
+            
+            .benefit-title {
+                font-size: 16px;
+            }
+            
+            .benefit-text {
+                font-size: 14px;
             }
             
             .step {
                 padding: 12px;
+            }
+            
+            .step-text {
+                font-size: 14px;
+            }
+            
+            .testimonial-card {
+                padding: 25px 20px;
+            }
+            
+            .testimonial-text {
+                font-size: 15px;
+            }
+            
+            .notice {
+                padding: 20px;
+                margin: 30px 15px;
+            }
+            
+            .notice-title {
+                font-size: 16px;
+            }
+            
+            .notice-text {
+                font-size: 14px;
+            }
+            
+            .price-card {
+                padding: 30px 20px;
+            }
+            
+            .price-new {
+                font-size: 40px;
+            }
+            
+            .cta-button {
+                padding: 16px 28px;
+                font-size: 16px;
+            }
+            
+            .faq h2 {
+                font-size: 24px;
+            }
+            
+            .faq-question {
+                font-size: 15px;
+            }
+            
+            .faq-answer {
+                font-size: 14px;
+            }
+            
+            .guarantee-items {
+                gap: 15px;
+            }
+            
+            .guarantee-item {
+                font-size: 13px;
             }
         }
     </style>
@@ -559,7 +684,7 @@
                 <h2 class="story-title">🧠 Por que estou criando isso:</h2>
                 <p class="story-text">
                     Há 3 meses, depois de anos lutando com meu TDAH severo e <strong>exaustão mental constante</strong>, eu fiz algo diferente: 
-                    <span class="highlight">treinei um assistente inteligente para reconhecer MEUS padrões de autossabotagem</span> e me ajudar a priorizar tarefas quando meu cérebro entrava em paralisia.
+                    <span class="highlight">treinei um assistente inteligente</span> para reconhecer MEUS padrões de autossabotagem e me ajudar a priorizar tarefas quando meu cérebro entrava em paralisia.
                     <br><br>
                     <strong>O resultado? Minha vida destravou.</strong> Antes parecia que nada andava pra frente - agora sinto que posso realizar qualquer coisa. Não por mágica, mas porque finalmente tinha algo que entendia como meu cérebro TDAH funciona.
                     <br><br>
@@ -573,8 +698,8 @@
     <!-- Creator Section -->
     <div class="creator">
         <div class="creator-box">
-            <!-- Adicione sua foto aqui -->
-            <!-- <img src="sua-foto.jpg" alt="Caíque" class="creator-img"> -->
+            <!-- COLE O LINK DA SUA IMAGEM AQUI -->
+            <img src="COLE_AQUI_O_LINK_DA_SUA_FOTO_DO_GITHUB" alt="Caíque" class="creator-img">
             <h3 class="creator-name">Caíque, 28 anos</h3>
             <p class="creator-bio">
                 Empreendedor há 6 anos. TDAH diagnosticado. <br>
@@ -592,27 +717,33 @@
             <div class="example-box">
                 <h3 class="example-title">📱 Exemplo REAL do assistente em ação:</h3>
                 
-                <div class="chat-bubble user">
-                    <div class="chat-label">VOCÊ ÀS 9:37</div>
-                    <p class="chat-text">Tenho que fazer relatório, responder emails, reunião às 14h, comprar comida, pagar boleto... tô travado, não sei por onde começar 😰</p>
-                </div>
-                
-                <div class="chat-bubble ai">
-                    <div class="chat-label">ASSISTENTE TDAH ÀS 9:38</div>
-                    <p class="chat-text">
-                        <strong>Detectei paralisia de análise.</strong> Vamos destravar AGORA:
-                        <br><br>
-                        <strong>⚡ FAÇA PRIMEIRO (15 min):</strong><br>
-                        1. Paga o boleto (2 min - tira da cabeça)<br>
-                        2. Responde SÓ emails urgentes (10 min - timer ligado)<br>
-                        <br>
-                        <strong>📝 DEPOIS (antes da reunião):</strong><br>
-                        3. Relatório: escreve SÓ a estrutura em tópicos<br>
-                        <br>
-                        Comida você pede iFood depois da reunião. Sem culpa.
-                        <br><br>
-                        <strong>👉 PRÓXIMA AÇÃO: Abre o app do banco AGORA e paga esse boleto. Me avisa quando terminar. ⏱️</strong>
-                    </p>
+                <div class="whatsapp-container">
+                    <div class="whatsapp-header">
+                        💬 TDAH Coach
+                    </div>
+                    
+                    <div class="chat-bubble user">
+                        <div class="chat-time">09:37</div>
+                        <p class="chat-text">Tenho que fazer relatório, responder emails, reunião às 14h, comprar comida, pagar boleto... tô travado, não sei por onde começar 😰</p>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                    
+                    <div class="chat-bubble ai">
+                        <div class="chat-time">09:38</div>
+                        <p class="chat-text">
+                            <strong>Detectei paralisia de análise.</strong> Vamos destravar AGORA:<br><br>
+                            <strong>⚡ FAÇA PRIMEIRO (15 min):</strong><br>
+                            1. Paga o boleto (2 min - tira da cabeça)<br>
+                            2. Responde SÓ emails urgentes (10 min - timer ligado)<br><br>
+                            <strong>📝 DEPOIS (antes da reunião):</strong><br>
+                            3. Relatório: escreve SÓ a estrutura em tópicos<br><br>
+                            Comida você pede iFood depois da reunião. Sem culpa.<br><br>
+                            <strong>👉 PRÓXIMA AÇÃO: Abre o app do banco AGORA e paga esse boleto. Me avisa quando terminar. ⏱️</strong>
+                        </p>
+                    </div>
+                    
+                    <div class="clearfix"></div>
                 </div>
                 
                 <div class="example-footer">
@@ -626,7 +757,7 @@
     <!-- Benefits -->
     <div class="benefits">
         <div class="container">
-            <h2>O Que o TDAH Focus Faz Diferente</h2>
+            <h2>O Que o TDAH Coach Faz Diferente</h2>
             <p class="benefits-subtitle">Desenvolvido para acabar com a exaustão mental de lutar sozinho contra o TDAH</p>
             
             <div class="benefit-grid">
@@ -691,7 +822,7 @@
         <div class="notice">
             <div class="notice-title">⚠️ ATENÇÃO IMPORTANTE:</div>
             <div class="notice-text">
-                O TDAH Focus NÃO substitui tratamento médico ou psicológico. É uma ferramenta de produtividade complementar, criada para trabalhar JUNTO com seu tratamento. Não fazemos diagnósticos nem substituímos profissionais de saúde - fazemos algo diferente: ajudamos você a ser produtivo com o cérebro que tem, nas 167 horas da semana que você não está no consultório.
+                O TDAH Coach NÃO substitui tratamento médico ou psicológico. É uma ferramenta de produtividade complementar, criada para trabalhar JUNTO com seu tratamento. Não fazemos diagnósticos nem substituímos profissionais de saúde - fazemos algo diferente: ajudamos você a ser produtivo com o cérebro que tem, nas 167 horas da semana que você não está no consultório.
             </div>
         </div>
     </div>
@@ -703,14 +834,14 @@
                 <p class="testimonial-text">
                     "ChatGPT e Claude são ótimos, mas eles não entendem TDAH. Quando você fala que está procrastinando, eles te dão uma lista genérica. Esse aqui SABE que meu cérebro precisa de dopamina rápida primeiro pra depois conseguir fazer o importante."
                 </p>
-                <p class="testimonial-author">- Usuário teste, 29 anos, TDAH combinado</p>
+                <p class="testimonial-author">- Lucas, 29 anos, TDAH tipo combinado</p>
             </div>
             
             <div class="testimonial-card">
                 <p class="testimonial-text">
                     "É a primeira vez que algo digital realmente 'me pega'. Tipo, ele sabe quando estou enrolando vs quando estou genuinamente travada. E não me julga, só me ajuda a sair da paralisia. Acabou minha exaustão mental de fim de dia."
                 </p>
-                <p class="testimonial-author">- Usuária teste, 34 anos, diagnosticada há 2 anos</p>
+                <p class="testimonial-author">- Marina, 34 anos, diagnosticada há 2 anos</p>
             </div>
         </div>
     </div>
@@ -729,7 +860,7 @@
                 <a href="https://pay.hotmart.com/O103504737D" class="cta-button">
                     GARANTIR MINHA VAGA AGORA →
                 </a>
-                <p style="margin-top: 20px; opacity: 0.9; font-size: 14px;">
+                <p style="margin-top: 20px; color: #6b7280; font-size: 14px;">
                     ✅ Cancele quando quiser<br>
                     ✅ Garantia de 30 dias<br>
                     ✅ Acesso em Janeiro 2026
@@ -781,7 +912,7 @@
     <!-- Final CTA -->
     <div class="guarantee">
         <div class="container">
-            <h3 style="font-size: 26px; margin-bottom: 25px; color: #1a1a1a;">
+            <h3 style="font-size: 24px; margin-bottom: 25px; color: #1a1a1a;">
                 🚀 Chega de exaustão mental. Destrave sua vida com TDAH.
             </h3>
             <a href="https://pay.hotmart.com/O103504737D" class="cta-button">
