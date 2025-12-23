@@ -3,168 +3,566 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coach IA para TDAH - Criado por quem entende</title>
+    <title>TDAH Focus - O Primeiro Coach de IA Criado Por Quem Tem TDAH</title>
+    <meta name="description" content="Transforme seu TDAH em superpoder. Coach de IA no WhatsApp que entende como seu cérebro funciona. Criado por quem tem TDAH, para quem tem TDAH.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
+            background: #ffffff;
         }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 15px;
-            color: #000;
-        }
-        .subtitle {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .problem {
-            background: #FFF3CD;
-            border-left: 4px solid #FFC107;
-            padding: 15px;
-            margin: 25px 0;
-        }
-        .benefits {
-            margin: 30px 0;
-        }
-        .benefits li {
-            list-style: none;
-            padding: 10px 0;
-            font-size: 16px;
-        }
-        .offer-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
             color: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 30px 0;
+            padding: 40px 20px;
             text-align: center;
         }
+        
+        .alert-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.5;
+        }
+        
+        /* Story Section */
+        .story {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .story-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .story-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #6366f1;
+        }
+        
+        .story-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .highlight {
+            background: linear-gradient(to right, rgba(99,102,241,0.1), rgba(139,92,246,0.1));
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        /* Benefits */
+        .benefits {
+            padding: 50px 20px;
+            background: white;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .benefit-grid {
+            display: grid;
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #6366f1;
+        }
+        
+        .benefit-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .benefit-text {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        /* How it Works */
+        .how-it-works {
+            background: #fef3c7;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .steps {
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            background: #f59e0b;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 50px 20px;
+            background: #f8f9fa;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .testimonial-text {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #2d3748;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #6366f1;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .price-card {
+            max-width: 400px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(99,102,241,0.3);
+        }
+        
+        .badge {
+            background: #f59e0b;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
         .price-old {
             text-decoration: line-through;
             opacity: 0.7;
-            font-size: 18px;
+            font-size: 20px;
         }
+        
         .price-new {
-            font-size: 32px;
-            font-weight: bold;
-            margin: 10px 0;
+            font-size: 48px;
+            font-weight: 800;
+            margin: 15px 0;
         }
+        
+        .price-period {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
         .scarcity {
             background: rgba(255,255,255,0.2);
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 600;
         }
+        
+        /* CTA Button */
         .cta-button {
-            background: #28a745;
+            background: #10b981;
             color: white;
-            padding: 18px 40px;
+            padding: 20px 40px;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 700;
             text-decoration: none;
-            display: block;
-            text-align: center;
-            border-radius: 5px;
-            margin: 25px 0;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-            transition: all 0.3s;
+            display: inline-block;
+            border-radius: 8px;
+            margin: 20px auto;
+            box-shadow: 0 4px 20px rgba(16,185,129,0.4);
+            transition: transform 0.2s;
         }
+        
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
         }
-        .testimonial {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 25px 0;
-            border-left: 3px solid #667eea;
+        
+        /* Important Notice */
+        .notice {
+            background: #eff6ff;
+            border: 2px solid #3b82f6;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 40px auto;
         }
+        
+        .notice-title {
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .notice-text {
+            color: #1e40af;
+            line-height: 1.6;
+        }
+        
+        /* Guarantee */
         .guarantee {
             text-align: center;
-            color: #666;
-            font-size: 14px;
-            margin: 30px 0;
+            padding: 30px 20px;
+            background: #f8f9fa;
         }
-        .urgency {
-            background: #dc3545;
-            color: white;
+        
+        .guarantee-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .guarantee-item {
+            color: #4a5568;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 50px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq h2 {
             text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            animation: pulse 2s infinite;
+            font-size: 28px;
+            margin-bottom: 30px;
         }
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .faq-answer {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 640px) {
+            .hero {
+                padding: 30px 15px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .price-card {
+                padding: 30px 20px;
+            }
+            
+            .price-new {
+                font-size: 36px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="urgency">
-            ⏰ OFERTA ESPECIAL DE LANÇAMENTO - APENAS 100 VAGAS
-        </div>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="alert-badge">⚡ VAGAS LIMITADAS - OFERTA DE LANÇAMENTO</div>
+        <h1>O Primeiro Coach de IA Criado POR Quem Tem TDAH, PARA Quem Tem TDAH</h1>
+        <p class="subtitle">Pare de lutar contra seu cérebro. Aprenda a trabalhar COM ele usando IA treinada especificamente para TDAH.</p>
+    </div>
 
-        <h1>Seu cérebro TDAH te sabota toda manhã e você sabe disso</h1>
-        
-        <p class="subtitle">Finalmente um coach de IA que ENTENDE como funciona o cérebro TDAH (porque foi criado por alguém que tem)</p>
-
-        <div class="problem">
-            <strong>😤 A realidade:</strong> Você acorda com 47 coisas pra fazer, não sabe por onde começar, se distrai no Instagram, e quando vê já são 15h e você não fez NADA importante.
-        </div>
-
-        <div class="benefits">
-            <ul>
-                <li>✅ <strong>Priorização inteligente:</strong> Te diz EXATAMENTE o que fazer primeiro (e por quê)</li>
-                <li>✅ <strong>Body doubling virtual:</strong> Fica "do seu lado" enquanto você trabalha</li>
-                <li>✅ <strong>Modo crise:</strong> Quando você trava, ele destrava na hora</li>
-                <li>✅ <strong>No WhatsApp:</strong> Zero fricção, zero app novo pra esquecer</li>
-                <li>✅ <strong>Aprende SEU padrão:</strong> Cada dia fica mais personalizado pra VOCÊ</li>
-            </ul>
-        </div>
-
-        <div class="testimonial">
-            💬 <em>"Eu tentei Todoist, Notion, terapia, remédio... NADA funcionava porque nada foi feito POR quem tem TDAH. Isso aqui é diferente. É como ter um amigo que ENTENDE no WhatsApp 24h."</em>
-            <br><strong>- Beta tester, diagnosticado há 5 anos</strong>
-        </div>
-
-        <div class="offer-box">
-            <h2>OFERTA FUNDADOR</h2>
-            <div class="price-old">R$ 69/mês</div>
-            <div class="price-new">R$ 19/mês</div>
-            <div>PARA SEMPRE!</div>
-            <div class="scarcity">Restam 73 de 100 vagas</div>
-        </div>
-
-        <a href="https://pay.hotmart.com/O103504737D" class="cta-button">
-            GARANTIR MINHA VAGA POR R$19 →
-        </a>
-
-        <div class="guarantee">
-            <p>🔒 Pagamento seguro via Hotmart</p>
-            <p>✅ Garantia de 30 dias</p>
-            <p>📱 Acesso em Janeiro 2025 via WhatsApp</p>
-            <p style="margin-top: 15px; color: #999;">
-                Criado por alguém que tem TDAH severo e já tentou TUDO.<br>
-                Esse é o app que eu queria que existisse.
-            </p>
+    <!-- Story Section -->
+    <div class="story">
+        <div class="container">
+            <div class="story-box">
+                <h2 class="story-title">🧠 Por que estou criando isso:</h2>
+                <p class="story-text">
+                    Há 3 meses, depois de anos lutando com meu TDAH severo, eu fiz algo diferente: 
+                    <span class="highlight">treinei uma IA para reconhecer MEUS padrões de autossabotagem</span> e me ajudar a priorizar tarefas quando meu cérebro travava.
+                    <br><br>
+                    <strong>O resultado? Minha produtividade triplicou.</strong> Não por mágica, mas porque finalmente tinha algo que entendia como meu cérebro TDAH funciona.
+                    <br><br>
+                    Agora estou transformando isso em um app para que você também possa ter esse "parceiro" que entende TDAH de verdade. 
+                    <strong>Não é mais uma lista de tarefas glorificada.</strong> É uma IA que sabe quando você está procrastinando, quando está em hiperfoco tóxico, e quando precisa de ajuda para destravar.
+                </p>
+            </div>
         </div>
     </div>
+
+    <!-- Benefits -->
+    <div class="benefits">
+        <div class="container">
+            <h2>O Que o TDAH Focus Faz Diferente</h2>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-title">🎯 Priorização Inteligente</div>
+                    <div class="benefit-text">
+                        Não só organiza tarefas - entende quando você está travado e quebra tudo em micro-passos que seu cérebro TDAH consegue processar.
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-title">👥 "Alguém Trabalhando Com Você"</div>
+                    <div class="benefit-text">
+                        Sabe quando você só consegue trabalhar se tem alguém na sala? A IA simula essa presença, te mantendo focado sem ser invasiva.
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-title">🚨 Detecta Padrões Destrutivos</div>
+                    <div class="benefit-text">
+                        Reconhece quando você está em espiral de procrastinação ou hiperfoco tóxico e intervém com estratégias específicas para TDAH.
+                    </div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-title">📱 Direto no WhatsApp</div>
+                    <div class="benefit-text">
+                        Zero fricção. Nada de app novo para esquecer de abrir. Funciona onde você já está o dia todo.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How it Works -->
+    <div class="how-it-works">
+        <div class="container">
+            <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 30px;">Como Funciona:</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>Você manda áudio ou texto com suas tarefas do dia</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>A IA analisa e prioriza baseado em urgência E no seu nível de energia</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>Recebe lembretes e check-ins que FUNCIONAM com cérebro TDAH</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>Quando trava, manda "help" e recebe estratégia para destravar NA HORA</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Important Notice -->
+    <div class="container">
+        <div class="notice">
+            <div class="notice-title">🏥 Importante:</div>
+            <div class="notice-text">
+                O TDAH Focus NÃO substitui tratamento médico ou psicológico. É uma ferramenta de produtividade complementar, criada para trabalhar JUNTO com seu tratamento. Não fazemos diagnósticos nem substituímos profissionais de saúde - fazemos algo diferente: ajudamos você a ser produtivo com o cérebro que tem.
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials">
+        <div class="container">
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "ChatGPT e Claude são ótimos, mas eles não entendem TDAH. Quando você fala que está procrastinando, eles te dão uma lista genérica. Esse aqui SABE que meu cérebro precisa de dopamina rápida primeiro pra depois conseguir fazer o importante."
+                </p>
+                <p class="testimonial-author">- Beta tester, 29 anos, TDAH combinado</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "É a primeira vez que algo digital realmente 'me pega'. Tipo, ele sabe quando estou enrolando vs quando estou genuinamente travada. E não me julga, só me ajuda a sair da paralisia."
+                </p>
+                <p class="testimonial-author">- Beta tester, 34 anos, diagnosticada há 2 anos</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="pricing">
+        <div class="container">
+            <div class="price-card">
+                <div class="badge">Oferta Fundador</div>
+                <div class="price-old">R$ 69,90</div>
+                <div class="price-new">R$ 19,90</div>
+                <div class="price-period">por mês, para sempre!</div>
+                <div class="scarcity">
+                    🔥 Restam apenas 73 de 100 vagas de fundador
+                </div>
+                <a href="LINK_DA_HOTMART_AQUI" class="cta-button">
+                    GARANTIR MINHA VAGA AGORA →
+                </a>
+                <p style="margin-top: 15px; opacity: 0.9; font-size: 14px;">
+                    ✅ Cancele quando quiser<br>
+                    ✅ Garantia de 30 dias<br>
+                    ✅ Acesso em Janeiro 2025
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+        <h2>Perguntas Frequentes</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Por que cobrar se IAs como ChatGPT são grátis?</div>
+            <div class="faq-answer">
+                ChatGPT não foi treinado para TDAH. Ele não reconhece padrões de procrastinação, não sabe lidar com paralisia de análise, e muitas vezes "alimenta" comportamentos destrutivos. Nosso coach é especificamente treinado em estratégias de TDAH e aprende SEU padrão individual.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Quando vou ter acesso?</div>
+            <div class="faq-answer">
+                Janeiro de 2025. Estamos finalizando o treinamento da IA com os dados dos beta testers para garantir que funcione perfeitamente quando chegar até você.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">E se eu não gostar?</div>
+            <div class="faq-answer">
+                Você tem 30 dias de garantia total. Se não funcionar para você, é só pedir o dinheiro de volta. Sem perguntas, sem burocracia.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Preciso de diagnóstico formal de TDAH?</div>
+            <div class="faq-answer">
+                Não. Se você se identifica com os sintomas e acha que a ferramenta pode te ajudar, é para você. Não pedimos laudos nem fazemos diagnósticos.
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="guarantee">
+        <div class="container">
+            <h3 style="font-size: 24px; margin-bottom: 20px;">
+                🚀 Transforme seu TDAH em superpoder
+            </h3>
+            <a href="https://pay.hotmart.com/O103504737D" class="cta-button">
+                QUERO MEU COACH DE TDAH POR R$19,90 →
+            </a>
+            <div class="guarantee-items">
+                <span class="guarantee-item">🔒 Pagamento 100% seguro</span>
+                <span class="guarantee-item">⚡ Acesso vitalício ao preço de fundador</span>
+                <span class="guarantee-item">❤️ Criado por quem entende sua luta</span>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
